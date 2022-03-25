@@ -5,8 +5,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>JavaScript Coding Quiz</title>
+
         <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+
+    
     </head>
     <body>
         <div>
@@ -26,8 +30,8 @@
                         JavaScript Coding Quiz
                     </h1>
                     <h2>
-                    This quiz will test you on your knowledge of JavaScript and you will be able to compete with others by posting your high score and putting your skills to the test! Be sure to read each question thoroughly and pick the answer that you feel works the best. The timer will begin to countdown once you click the "Start Quiz!" button below. <br><br>
-                    Good Luck!
+                    This quiz will test you on your knowledge of JavaScript and you will be able to compete with others by posting your high score and putting your skills to the test! Be sure to read each question thoroughly and pick the answer that you feel works the best. The timer will begin to countdown once you click the "Start Quiz!" button below.
+                    <h3>Good Luck!</h3>
                     </h2>
                 </main>
                 <div>
@@ -35,7 +39,44 @@
                 </div>
                 <script src="./assets/js/script.js"></script>
             </div>
-        
+
+            <!-- questions -->
+            <div id="questions" style="display:none;">
+                <p id="question-title"></p>
+                <div>
+                    <p><button id="btn0" class="btn"></button></p>
+                    <p><button id="btn1" class="btn"></button></p>
+                    <p><button id="btn2" class="btn"></button></p>
+                    <p><button id="btn3" class="btn"></button></p>
+                    <p id="answer" style="display:none;"></p>
+                </div>
+            </div>
+
+            <!-- score -->
+            <div id="summary" style="display:none;">
+                <div></div>
+                <div>
+                    <h2>Your Final Score is: <span id="final-score"></span> !</h2>
+                    <form>
+                        <p>Enter your initials: <input id='initials' type="text">
+                        <button class="btn" type="submit" id="intital-submit">Submit</button>
+                        </p>
+                    </form>
+                </div>
+                <div></div>
+            </div>
+
+            <!-- highscores -->
+            <div id="high-scores" style="display:none;">
+                <h2>
+                    High Scores
+                </h2>
+                <div id="hs-list"></div>
+                <p>
+                    <button type="submit" id="go-back">Go Back</button>
+                    <button type="submit" id="clear">Clear High Scores</button>
+                </p>
+            </div>
         
         </div>  
     </body>

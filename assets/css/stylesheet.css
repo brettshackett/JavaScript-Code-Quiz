@@ -23,6 +23,15 @@ nav{
 
 nav a{
     font-size:large;
+    color:black;
+}
+
+nav a:hover{
+    font-size:30px;
+    background-color:blue;
+    color:white;
+    padding:4px;
+    border-radius: 10px;
 }
 
 nav timer{
@@ -41,5 +50,26 @@ nav timer{
 
 .start-page h2{
     font-size:20px;
-    margin:0 6% 4% 6%;
+    margin:45px;
+}
+
+.start-page h3{
+    font-size:30px;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 20px;
+    padding:12px 28px;
+    background-color: rgb(15, 23, 138); 
+}
+
+.btn{
+    color:white;
+}
+
+button:hover{
+    font-size:25px;
+    background-color:blue;
+    text-decoration: underline;
 }
