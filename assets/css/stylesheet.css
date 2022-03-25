@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.start-page{
+    flex-wrap:wrap;
+}
+
+.start-page h1{
+    font-size:55px;
+}
+
+.start-page h2{
+    font-size:20px;
+}
