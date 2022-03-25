@@ -8,18 +8,38 @@ body {
   font-family: sans-serif;
   background-color: #ffffff;
   display:flex;
+  flex-wrap:wrap;
   text-align: center;
   flex-direction: column;
+
+}
+
+nav{
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+nav a{
+    font-size:large;
+}
+
+nav timer{
+    font-size:30px;
+    font-weight:bold;
 }
 
 .start-page{
-    flex-wrap:wrap;
+    padding: 2%;
 }
 
 .start-page h1{
     font-size:55px;
+    text-decoration: underline;
 }
 
 .start-page h2{
     font-size:20px;
+    margin:0 6% 4% 6%;
 }
