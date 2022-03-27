@@ -18,14 +18,15 @@
             <!-- the top row that contains the high score and the timer that's counting down -->
             <header>
                 <nav>
-                    <a href="#">High Scores</a>
-                    <timer>Time Left: <span id="time-left">0</span></timer>
+                    <a href="#" id ="viewHighScores">High Scores</a>
+                    <timer id="timer">Time Left: <span id="time-left">0</span></timer>
+                    <div id="times-up" style="display:none;">Time's up!</div>
                 </nav>
             </header>
 
             <!-- start page -->
-            <div class="start-page">
-                <main>
+            <div id= "everything" class="start-page">
+                <main id="start">
                     <h1>
                         JavaScript Coding Quiz
                     </h1>
@@ -37,7 +38,6 @@
                 <div>
                     <button class="btn" id="start-quiz">Start Quiz!</button>
                 </div>
-                <script src="./assets/js/script.js"></script>
             </div>
 
             <!-- questions -->
@@ -48,6 +48,7 @@
                     <p><button id="btn1" class="btn"></button></p>
                     <p><button id="btn2" class="btn"></button></p>
                     <p><button id="btn3" class="btn"></button></p>
+                    <br>
                     <p id="answer" style="display:none;"></p>
                 </div>
             </div>
@@ -79,5 +80,6 @@
             </div>
         
         </div>  
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
