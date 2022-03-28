@@ -149,7 +149,7 @@ function nextQuestion(){
 }
 
 //tell the user whether the choice is correct or incorrect
-function checkAnswer(answer){
+function answerCheck(answer){
     checkAnswer.style.display = "block";
 
     if(questions[questionIndex].answer === questions[questionIndex].choices[answer]){
@@ -163,7 +163,6 @@ function checkAnswer(answer){
     }
 
     questionIndex++
-
 // repeats through the whole questions array
     if (questionIndex < questions.length){
         nextQuestion();
@@ -173,10 +172,10 @@ function checkAnswer(answer){
 }
 
 //making each selection its own function that gets ran through the previous function that allows the program to check if the answer submitted was the same as the answer that is in the array
-function A(){checkAnswer(0);}
-function B(){checkAnswer(1);}
-function C(){checkAnswer(2);}
-function D(){checkAnswer(3);}
+function chooseA(){answerCheck(0);}
+function chooseB(){answerCheck(1);}
+function chooseC(){answerCheck(2);}
+function chooseD(){answerCheck(3);}
 
 function gameOver(){
     summary.style.display = "block";
@@ -193,7 +192,7 @@ function storeHighScores(event){
 
     // makes sure that initials were input
     if(initials.value === ""){
-        window.alert("Please enter your initials.")
+        alert("Please enter your initials.")
         return;
     }
 
@@ -201,7 +200,7 @@ function storeHighScores(event){
     timer.style.display = "none";
     timesUp.style.display = "none";
     summary.style.display = "none";
-    highScores.style.display = "block";
+    hsList.style.display = "block";
 
     var savedHighScores = localStorage.getItem("high scores");
     var scoresArray;
@@ -214,7 +213,7 @@ function storeHighScores(event){
 
     //setting the user score initials and score so that it can be saved and added to the high scores section and in local storage
     var userScore = {
-        initials: initials.value,
+        initials: submitInitial.value,
         score: finalScore.textContent
     };
 
@@ -230,15 +229,17 @@ function storeHighScores(event){
     showHighScores();
 }
 
-var i = 0;
+
+var i =0;
 function showHighScores(){
 
+    startQuizBtn.style.display = "none";
     startDiv.style.display = "none";
     timer.style.display = "none";
     questionDiv.style.display = "none";
     timesUp.style.display = "none";
     summary.style.display = "none";
-    highScoreSection.style.display = "block";
+    highScores.style.display = "block";
 
     var savedHighScores = localStorage.getItem("high scores");
 
@@ -258,18 +259,16 @@ function showHighScores(){
 
 // event listeners
 startQuizBtn.addEventListener("click", startQuiz);
-choiceA.addEventListener("click", A);
-choiceB.addEventListener("click", B);
-choiceC.addEventListener("click", C);
-choiceD.addEventListener("click", D);
+choiceA.addEventListener("click", chooseA);
+choiceB.addEventListener("click", chooseB);
+choiceC.addEventListener("click", chooseC);
+choiceD.addEventListener("click", chooseD);
 
 submitInitial.addEventListener("click", function(event){
     storeHighScores(event);
 });
 
-viewHighScores.addEventListener("click", function(event){
-    showHighScores(event);
-});
+viewHighScores.addEventListener("click", showHighScores());
 
 goBack.addEventListener("click", function(){
     startDiv.style.display = "block";
